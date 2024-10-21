@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundDark"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/voiceTriggerEt"
+        android:layout_width="0dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/routine_card_background"
+        android:hint="Quando dico \u0022Jarvis...\u0022"
+        android:textColorHint="@android:color/tab_indicator_text"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/deleteVoiceTriggerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_delete" />
+
+</LinearLayout>

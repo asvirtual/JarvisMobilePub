@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/rootActionLayout"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:background="@color/backgroundDark"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/actionIndexTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_background"
+        android:text="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/routine_card_background">
+
+        <ImageView
+            android:id="@+id/routineActionIcon"
+            android:src="@drawable/ic_volume_off"
+            android:layout_gravity="center_vertical"
+            android:minWidth="30dp"
+            android:minHeight="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/routineActionName"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center_vertical"
+            android:textSize="17sp"
+            android:layout_marginStart="10dp"
+            android:maxLines="2"
+            android:text="Manda un messaggio a toni con testo ciao come va tutto bene anche io si spero dai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/actionDeleteIb"
+        android:layout_marginStart="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/backgroundDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"/>
+
+</LinearLayout>

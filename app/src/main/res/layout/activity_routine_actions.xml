@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundDark"
+    tools:context=".activities.RoutineActionsActivity">
+
+    <ScrollView
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/chooseRoutineActionCategoryRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scegli le azioni della routine"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scegli fra queste categorie"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="14sp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/actionCommunicationsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_announce"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Ricevere informazioni"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Informazioni sul meteo, eventi sul calendario, sveglie"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionAnnouncementsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_message"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Comunica e annuncia"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Invia messaggi, fai annunci"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionVolumeLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_volume"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Regola il volume"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Imposta il volume del telefono"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionPhoneSettingsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_phone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Regola le impostazioni del telefono"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Disattiva la suoneria, attiva la modalità non disturbare"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionConnectivitySettingsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_network_check"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Rete e connessione"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Getisci le impostazioni di rete e connesione (Wi-Fi, Bluetooth...)"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionAssistantSettingsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_default_routine"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Impostazioni dell'assistente"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Regola le impostazioni di Jarvis"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/actionCustomLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_jarvis_blue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Comando personalizzato"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="Inserisci un comando personalizzato"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionCommunicationsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ricevere informazioni"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"/>
+
+            <CheckBox
+                android:id="@+id/routineActionWeatherCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dà informazioni sul meteo"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionEventsCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dice gli impegni di oggi"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionTellDateTimeCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dice che ore sono e che giorno è"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionSetAlarmCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fa suonare una sveglia all'orario programmato per l'esecuzione della routine"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionAnnouncementsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comunica e annuncia"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/routineActionMessageComingHomeCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dice che sto arrivando a casa a tutti"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/routineActionSendWhatsappMessageCb"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Manda un messaggio su whatsapp"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <ImageButton
+                    android:id="@+id/routineActionSendWhatsappMessageOptionsIb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"
+                    android:background="@android:color/transparent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/routineActionSpeakCb"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dice qualcosa"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <ImageButton
+                    android:id="@+id/routineActionSpeakOptionsIb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_left"
+                    android:background="@android:color/transparent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center_vertical"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionVolumeRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regola il volume"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volume multimediale"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/mediaVolumeCb"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <SeekBar
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:progress="50"
+                    android:min="1"
+                    android:max="100"
+                    android:progressTint="@color/iconColor"
+                    android:id="@+id/mediaVolumeSb"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:progressBackgroundTint="@android:color/white"
+                    android:thumbTint="@color/iconColor"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/mediaVolumeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="50"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volume suoneria"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/ringVolumeCb"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <SeekBar
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/ringVolumeSb"
+                    android:progress="50"
+                    android:min="1"
+                    android:max="100"
+                    android:progressTint="@color/iconColor"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:progressBackgroundTint="@android:color/white"
+                    android:thumbTint="@color/iconColor"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/ringVolumeTv"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/white"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Volume notifiche"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/notificationVolumeCb"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <SeekBar
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/notificationVolumeSb"
+                    android:min="1"
+                    android:max="100"
+                    android:progressTint="@color/iconColor"
+                    android:progress="50"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:progressBackgroundTint="@android:color/white"
+                    android:thumbTint="@color/iconColor"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/notificationVolumeTv"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@android:color/white"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionPhoneSettingsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regola le impostazioni del telefono"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/routineActionMuteRingerCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disattiva la suoneria del telefono"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionVibrateRingerCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mette il telefono in vibrazione"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionRingRingerCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attiva la suoneria del telefono"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionDndOnCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attiva la modalità non disturbare"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionDndOffCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disattiva la modalità non disturbare"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionWhatsappMessageOptionsLl"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="A chi vuoi inviare il messaggio?"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/actionWhatsappMessageNumberEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/routine_card_background"
+                    android:hint="Mario Rossi"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/tab_indicator_text"/>
+
+                    <ImageButton
+                        android:id="@+id/actionWhatsappMessagePickContactIb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_contact"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:text="Qual è il testo del messaggio?"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/actionWhatsappMessageBodyEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/routine_card_background"
+                android:hint="Ciao da Jarvis"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/tab_indicator_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/actionSpeakOptionsLl"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:text="Cosa dovrebbe dire Jarvis?"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/actionSpeakEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/routine_card_background"
+                android:hint="Signore..."
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/tab_indicator_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionCustomRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="Inserisci il comando:"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/icon_jarvis_blue"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/actionCustomEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/routine_card_background"
+                    android:hint="Imposta una sveglia alle 10:15"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@android:color/tab_indicator_text"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionConnectivitySettingsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regola le impostazioni di rete e connessione"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"/>
+
+            <CheckBox
+                android:id="@+id/routineActionBluetoothOnCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attiva il Bluetooth"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:id="@+id/routineActionBluetoothOffCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disattiva il Bluetooth"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/routineActionWifiOnCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Attiva il Wi-Fi"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/routineActionWifiOffCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disattiva il Wi-fi"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/editRoutineActionAssistantSettingsRl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regola le impostazioni dell'assistente"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/routineActionStopListeningCb"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Disattiva il riconoscimento vocale in background"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <ImageButton
+                    android:id="@+id/actionInfoStopListeningIb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_info" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/routineActionStartListeningCb"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Riattiva il riconoscimento vocale in background"
+                    android:textColor="@android:color/white"
+                    android:buttonTint="@android:color/white"/>
+
+                <ImageButton
+                    android:id="@+id/actionInfoStartListeningIb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_info" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/actionFinishedBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fine"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        android:background="@drawable/rounded_button_background_activated"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

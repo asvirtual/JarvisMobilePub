@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/backgroundDark"
+    android:orientation="vertical"
+    tools:context=".activities.RoutineActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroundDark"
+            android:src="@drawable/ic_close" />
+
+        <ImageView
+            android:id="@+id/imgRoutine"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/routineNameEt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/imgRoutine"
+            android:background="@android:color/transparent"
+            android:text="Nome Routine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esegui quando"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="90dp"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/triggerWrapperLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/llNoTrigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/tab_indicator_text"
+                    android:text="Scegli il criterio di avvio"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="140dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llTriggerSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/voiceTriggerLl"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/routine_card_background"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/triggerTypeVoiceIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_mic_blue"/>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Quando dico"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/triggerPhraseTv"
+                                android:text="\u0022Notte\u0022 o \u0022Buonanotte\u0022 o \u0022Vado a dormire\u0022"
+                                android:ellipsize="end"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/iconColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_left" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/voiceTriggerDeleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete"
+                        android:background="@color/backgroundDark"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateTriggerLl"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/routine_card_background"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <ImageView
+                            android:id="@+id/triggerTypeDateIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_time" />
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Alle ore"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/triggerDateTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="13:30 ogni Lun, Mar, Ven"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/iconColor" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_left" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/dateTriggerDeleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete"
+                        android:background="@color/backgroundDark"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/positionTriggerLl"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/routine_card_background"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:id="@+id/triggerTypeLocationIv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_location_marker"/>
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_marginStart="20dp"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="Quando mi trovo in"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@android:color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/triggerLocationTv"
+                                android:text="Liceo G. Oberdan, Trieste"
+                                android:ellipsize="end"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/iconColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_left" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/positionTriggerDeleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_delete"
+                        android:background="@color/backgroundDark"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addTriggerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/routine_card_background_blue"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="10dp"
+                android:paddingEnd="10dp"
+                android:text="Aggiungi un comando"
+                android:textColor="@color/iconColor"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/separatorView"
+                android:layout_width="match_parent"
+                android:layout_height="0.75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/white"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Azioni della routine"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/routineActionsRv"
+                android:isScrollContainer="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:itemCount="3"
+                tools:listitem="@layout/routine_action_cardview">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/addActionBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/routine_card_background_blue"
+                android:drawableStart="@drawable/ic_add"
+                android:drawablePadding="10dp"
+                android:paddingEnd="10dp"
+                android:text="Aggiungi un comando"
+                android:textColor="@color/iconColor"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/routineActiveCb"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Routine attiva"
+                android:paddingStart="5dp"
+                android:textColor="@android:color/white"
+                android:buttonTint="@android:color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

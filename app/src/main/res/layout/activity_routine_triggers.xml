@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDark"
+    tools:context=".activities.RoutineTriggersActivity">
+
+    <ImageButton
+        android:layout_margin="10dp"
+        android:id="@+id/routineTriggerBtnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundDark"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+        android:id="@+id/chooseTriggerTypeRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Esegui con"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/triggerTypeChoiceVoiceLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/routine_card_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mic_blue" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comando vocale"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/triggerTypeChoiceDateLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/routine_card_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_time" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ora"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/triggerTypeChoiceLocationLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/routine_card_background"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_marker" />
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luogo"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_left" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/setDateTriggerRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ora del giorno"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:textSize="19sp" />
+
+        <LinearLayout
+            android:id="@+id/dateTriggerLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/routine_card_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleziona un orario"
+                android:textColor="@android:color/tab_indicator_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dateTriggerTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="200dp"
+            android:background="@drawable/routine_card_background"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ripeti ogni"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_repeat"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerMonTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="L"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerTueTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="M"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerWedTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="M"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerThuTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="G"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerFriTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="V"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerSatTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="S"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dateTriggerSunTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/circle_background_blue"
+                    android:text="D"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnDateTriggerFinished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fine"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:background="@drawable/rounded_button_background_activated"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:id="@+id/setVoiceTriggerRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comando vocale"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/setTriggerSentenceInstructionsTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scegli una frase, ad esempio \u0022Buonanotte\u0022"
+            android:textColor="@android:color/tab_indicator_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="85dp"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/voiceTriggersRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="140dp"
+            tools:listitem="@layout/voice_trigger_layout"
+            tools:itemCount="2">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <!--<LinearLayout
+            android:id="@+id/voiceTriggerLl0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="140dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/voiceTriggerEt0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/routine_card_background"
+                android:hint="Quando dico \u0022Jarvis...\u0022"
+                android:textColorHint="@android:color/tab_indicator_text"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/deleteVoiceTriggerBtn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_delete" />
+
+        </LinearLayout>-->
+
+        <TextView
+            android:id="@+id/voiceTriggerAddSentenceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/voiceTriggersRv"
+            android:layout_marginBottom="-60dp"
+            android:layout_marginStart="11dp"
+            android:background="@drawable/routine_card_background_blue"
+            android:drawableStart="@drawable/ic_add"
+            android:drawablePadding="10dp"
+            android:paddingEnd="10dp"
+            android:text="Aggiungi una frase"
+            android:textColor="@color/iconColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/btnVoiceTriggerFinished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fine"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:background="@drawable/rounded_button_background_activated"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:id="@+id/setLocationTriggerRl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+</RelativeLayout>

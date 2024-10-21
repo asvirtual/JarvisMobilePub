@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/routine_card_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialogBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsium"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/closeDialogBtn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/routine_card_background_blue"
+        android:text="OK"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

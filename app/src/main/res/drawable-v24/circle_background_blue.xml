@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval" xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- we define background color -->
+    <solid android:color="@color/backgroundDark" />
+
+    <!-- we define border color and thick -->
+    <stroke
+        android:width="0.75dp"
+        android:color="@color/iconColor" />
+
+    <!-- add some padding for text inside -->
+    <padding
+        android:bottom="7.5dp"
+        android:left="7.5dp"
+        android:right="7.5dp"
+        android:top="7.5dp" />
+
+    <size
+        android:width="35dp"
+        android:height="35dp"/>
+</shape>
